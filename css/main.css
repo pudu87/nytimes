@@ -1,19 +1,60 @@
-img {
-  height: 20px;
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  box-sizing: border-box;
 }
 
 /* NAVBAR TOP */
 
-.top {
+nav.top {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 42px;
-  background-color: rgb(255, 255, 225);
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding: 6px 20px;
+  background-color: #FFF;
+  border-bottom: 1px solid #CCC;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
-
-.top > * {
-  display: inline;
+nav.top img {
+  height: 16px;
+  margin-right: 20px;
+}
+nav.top a {
+  color: #333;
+  text-decoration: none;
+}
+nav.top .space-cosmos {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.7px;
+}
+nav.top .space-cosmos:hover {
+  text-decoration: underline;
+}
+nav.top .nytimes {
+  flex: 1;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 28px;
+}
+nav.top button {
+  margin-left: auto;
+  margin: 2px;
+  padding: 8px 12px;
+  background-color: rgb(86, 123, 149);
+  border: 1px solid rgb(50, 104, 145);
+  border-radius: 3px;
+  color: white;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
 }
 
 /* MAIN */
@@ -59,5 +100,28 @@ footer {
   bottom: 0;
   width: 100%;
   height: 55px;
-  background-color: rgb(255, 253, 224);
+  background-color: #FFF;
+  border-top: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+  align-items: center;
+}
+.account .description {
+  text-align: center;
+  grid-column: 2 / span 1;
+  font-size: 14px;
+}
+.account .expand {
+  font-size: 14px;
+  grid-column: 3 / span 1;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+.account .expand span {
+  padding-left: 20px;
+  font-size: 16px;
 }
