@@ -335,7 +335,79 @@ section.content .graphic .authors::before {
 /* ASIDE */
 
 aside.bottom {
-  background-color: rgb(206, 206, 255);
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-areas:
+    "more mp"
+    "ep   mp";
+  column-gap: 25px;
+}
+aside.bottom .more {
+  grid-area: more;
+}
+aside.bottom .most-popular {
+  grid-area: mp;
+}
+aside.bottom .editors-picks {
+  grid-area: ep;
+}
+aside.bottom > * {
+  border-top: 1px solid;
+}
+aside.bottom .more,
+aside.bottom .editors-picks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+aside.bottom .more figure,
+aside.bottom .editors-picks figure {
+  margin-bottom: 25px;
+}
+aside.bottom .more img,
+aside.bottom .editors-picks img {
+  width: 100%;
+}
+aside.bottom .more figcaption,
+aside.bottom .editors-picks figcaption {
+  text-align: right;
+  color: #888;
+  font-size: 10px;
+  height: 12px;
+}
+aside.bottom .more p,
+aside.bottom .editors-picks p {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 3px 0;
+  font-weight: bold;
+}
+aside.bottom .more p:hover,
+aside.bottom .editors-picks p:hover {
+  color: #888;
+}
+aside.bottom .more p.date,
+aside.bottom .editors-picks p.date {
+  color: #888;
+  font-size: 12px;
+  font-weight: normal;
+}
+aside.bottom h4 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 0;
+  grid-column: 1 / -1;
+}
+aside.bottom .most-popular p {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px 0;
+  border-top: 1px solid #CCC;
+}
+aside.bottom .most-popular p:hover {
+  color: #888;
 }
 
 /* FOOTER */
