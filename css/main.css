@@ -267,7 +267,7 @@ section.content .graphic .intro {
 }
 section.content .graphic-image {
   grid-column: 1 / -1;
-  background-image: url("/images/inflation.png");
+  background: url("../images/inflation.png");
   background-attachment: #FFF;
   width: 100%;
   height: 575px;
