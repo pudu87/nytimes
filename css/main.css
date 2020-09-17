@@ -17,6 +17,10 @@ button {
 button:hover {
   background-color: rgb(50, 104, 145);
 }
+.nytimes {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 28px;
+}
 
 /* NAVBAR TOP */
 
@@ -53,8 +57,6 @@ nav.top .space-cosmos:hover {
 }
 nav.top .nytimes {
   flex: 1;
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 28px;
 }
 nav.top button {
   margin-left: auto;
@@ -242,6 +244,9 @@ section.content .side figcaption {
   font-size: 14px;
   line-height: 1.4;
 }
+section.content .side figcaption:hover {
+  text-decoration: underline;
+}
 
     /* GRAPHIC */
 
@@ -335,7 +340,7 @@ section.content .graphic .authors::before {
 /* ASIDE */
 
 aside.bottom {
-  margin: 50px;
+  margin: 50px 150px;
   display: grid;
   grid-template-columns: 5fr 2fr;
   grid-template-areas:
@@ -413,7 +418,102 @@ aside.bottom .most-popular p:hover {
 /* FOOTER */
 
 footer {
-  background-color: rgb(212, 253, 212);
+  margin: 50px 150px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+  /* CATEGORY */
+
+.category {
+  padding-top: 1px;
+  border-top: 2px solid #CCC;
+}
+.category .heading {
+  border-top: 1px solid #CCC;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.category .heading > a:hover{
+  text-decoration: none;
+}
+.category .heading .nytimes {
+  font-size: 24px;
+  padding-top: 5px;
+}
+.category .heading .home {
+  font-size: 11px;
+  color: rgb(86, 123, 149);
+  align-self: flex-end;
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+}
+.categories .category-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 12px 0;
+}
+.categories .category-list > li,
+.categories .subscribe > li,
+.categories .other > li {
+  text-transform: none; /*undo previous*/
+  font-weight: normal;  /*undo previous*/
+  line-height: 2;
+}
+.categories > li:last-child {
+  border-left: 1px solid #CCC;
+  padding-left: 15px;
+}
+.categories .category-list > li:first-child {
+  margin-top: 10px;
+}
+.categories .subscribe > li:first-child {
+  margin-top: 8px;
+}
+.categories .subscribe > li {
+  font-size: 14px;
+  font-weight: bold;
+}
+.categories .other {
+  font-size: 11px;
+}
+.categories .other > li:first-child {
+  margin-top: 10px;
+}
+.categories .other > li:nth-child(4) {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #CCC;
+}
+.categories .other > li:nth-child(5) {
+  padding-top: 5px;
+}
+
+
+  /* BOTTOM */
+
+.bottom-nav {
+  border-top: 1px solid #CCC;
+  padding: 8px 0 30px 0;
+  text-align: center;
+}
+.bottom-nav li {
+  display: inline;
+  font-size: 10px;
+}
+.bottom-nav a {
+  color: #666;
+  padding: 0 5px;
 }
 
 /* CREATE ACCOUNT */
